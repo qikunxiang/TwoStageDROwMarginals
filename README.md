@@ -19,7 +19,7 @@
 + func/CPWA/       contains functions related to univariate continuous piece-wise affine (CPWA) functions
     - CPWA\_1d\_conjugate.m: function used for computing the convex conjugate of a one-dimensional convex piecewise affine functions with compact domain
     - CPWA\_1d\_convexenv.m: function used for computing the convex envelope function of a one-dimensional piece-wise affine function with compact domain
-    - CPWA\_sep\_concavemin\_MILP\_gurobi.m: function that returns a gurobi model which formulates the problem of minimizating a separable concave function over a polytope into a mixed-integer linear programming (MILP) problem
+    - CPWA\_sep\_concavemin\_MILP\_gurobi.m: function that returns a Gurobi model which formulates the problem of minimizating a separable concave function over a polytope into a mixed-integer linear programming (MILP) problem
 
 + func/reassembly/       contains functions related to coupling and reassembly
     - comonotone\_coupling.m: function used for computing the comonotone coupling of discrete measures (i.e., a joint distribution formed with the given set of discrete marginals and the comonotone copula)
@@ -29,10 +29,10 @@
 + func/DRO/       contains functions used in the algorithm for approximately solving two-stage distributionally robust optimization (DRO) problems with marginal constraints
     - DRO\_cutplane.m: implementation of the cutting plane algorithm for solving linear semi-infinite programming formulations of relaxed two-stage DRO problems
     - DRO\_feascons.m: function that returns constraints (also known as feasibility cuts) in the cutting plane algorithm
-    - DRO\_primal\_approx.m: function used for approximately computing a lower bound on the optimal value of the two-stage DRO problem with marginal constraints via Monte Carlo integration
-    - DRO\_primal\_tighten\_gurobi.m: function that returns a gurobi model which corresponds to a linear programming problem used for generating/improving a lower bound on the optimal value of the relaxed two-stage DRO problem (see Supplementary.pdf)
-    - DRO\_stage2\_gurobi.m: function that returns a gurobi model which formulates the second-stage problem in DRO for a given first-stage decision and given uncertain quantities
-    - SP\_approx.m: function that formulates and solves the sample average approximation (SAA) or a stochastic programming problem given a collection of samples (only used for checking the feasibility of the DRO problem)
+    - DRO\_primal\_approx.m: function used for approximately computing a lower bound for the optimal value of the two-stage DRO problem with marginal constraints via Monte Carlo integration
+    - DRO\_primal\_tighten\_gurobi.m: function that returns a Gurobi model which corresponds to a linear programming problem used for generating/improving a lower bound for the optimal value of the relaxed two-stage DRO problem (see Supplementary.pdf)
+    - DRO\_stage2\_gurobi.m: function that returns a Gurobi model which formulates the second-stage problem in DRO for a given first-stage decision and a given vector of uncertain quantities
+    - SP\_approx.m: function that formulates and solves the sample average approximation (SAA) of a stochastic programming problem given a collection of samples (only used for checking the feasibility of the DRO problem)
 
 + func/DRO/problems			contains functions used for formulating concrete two-stage DRO problems
     - DRO\_task\_scheduling.m: function that returns the DRO problem formulation of a task scheduling problem
@@ -90,7 +90,7 @@
 + Run exp/DRO\_network/DRO\_network\_exp\_run2\_LB.m to approximately compute the lower bounds via Monte Carlo integration with respect to a constructed reassembly. This will create an output file exp/DRO\_network/exp\_rst\_LB.mat.
 
 ### Step 3: plot the results
-+ Run exp/DRO\_network/DRO\_network\_exp\_plot\_network.m to plot network structure along with the approximately optimal investment for the processing facilities.
++ Run exp/DRO\_network/DRO\_network\_exp\_plot\_network.m to plot network structure along with the approximately optimal investments for the processing facilities.
 + Run exp/DRO\_network/DRO\_network\_exp\_plot\_results.m to plot the upper and lower bounds.
 
 
