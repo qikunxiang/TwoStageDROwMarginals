@@ -1,7 +1,7 @@
 # Numerical method for approximately optimal solutions of two-stage distributionally robust optimization with marginal constraints
 
 + By Ariel Neufeld and Qikun Xiang
-+ Article link (arXiv): TBD
++ Article link (arXiv): https://arxiv.org/abs/2205.05315
 
 # Description of files
 
